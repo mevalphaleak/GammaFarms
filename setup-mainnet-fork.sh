@@ -1,0 +1,1 @@
+brownie run setup mainnet_fork --interactive

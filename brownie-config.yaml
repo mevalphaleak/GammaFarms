@@ -1,0 +1,70 @@
+# automatically fetch contract sources from Etherscan
+autofetch_sources: True
+dotenv: .env
+
+compiler:
+  solc:
+    version: 0.7.6
+    remappings:
+      - "@openzeppelin/contracts=OpenZeppelin/contracts"
+      - "@openzeppelin/contracts@3.4.1=OpenZeppelin/openzeppelin-contracts@3.4.1-solc-0.7-2/contracts"
+      - "@uniswap/v3-core=uniswap/v3-core@1.0.0"
+      - "@uniswap/v3-periphery=uniswap/v3-periphery@1.3.0"
+      - "@uniswap/v3-staker=uniswap/v3-staker@1.0.2"
+      - "@uniswap/swap-router-contracts=uniswap/swap-router-contracts@1.1.0"
+
+dependencies:
+  - OpenZeppelin/openzeppelin-contracts@3.4.1-solc-0.7-2
+  - uniswap/v3-core@1.0.0
+  - uniswap/v3-periphery@1.3.0
+  - uniswap/v3-staker@1.0.2
+  - uniswap/swap-router-contracts@1.1.0
+
+
+networks:
+  default: mainnet-fork
+
+  development:
+    # gas_price: 100000000000
+    gas_price: null
+    max_fee: null
+    priority_fee: auto
+
+  mainnet-fork:
+    cmd_settings:
+      port: 9545
+      evm_version: london
+      mnemonic: amazing plate forward avoid cloth fee rally sniff tattoo clean title liar
+      unlock:
+        - 0x32c761138aD9Ff95D8595aa9A79208F19b01d8E7  # random LQTY holder
+        - 0x88Cfdb5B32775940580dC3d34e90Bc8c34f0CF7D  # random LUSD holder
+        - 0x90102a92e8E40561f88be66611E5437FEb339e79  # random MAL holder
+        - 0x06920C9fC643De77B99cB7670A944AD31eaAA260  # random WETH holder
+
+# mnemonic: amazing plate forward avoid cloth fee rally sniff tattoo clean title liar
+#
+# Available Accounts
+# ==================
+# (0) 0x1B844d2fe55E9265D4027d13a08cd7D739174D63 (1000 ETH)
+# (1) 0xb4dc5674BFbB4391efDBba6031740A3ECd58239f (1000 ETH)
+# (2) 0x8c46D3e7a975bDF1cf9d222ffbae3Bb1Bf4aE0C0 (1000 ETH)
+# (3) 0x962B1aff2893C6519BdAcf588E225C221A8a8D21 (1000 ETH)
+# (4) 0xba7A14d4d8b8AcC232a61C7ae02E808001C6bB05 (1000 ETH)
+# (5) 0x76e572473411265B9355be480F3674bC969f1463 (1000 ETH)
+# (6) 0x21d79EB7634561667e910FF9634eb0B6d1f3a2D9 (1000 ETH)
+# (7) 0xA404DEc52282dcB87FbE248183db450b314A8810 (1000 ETH)
+# (8) 0xf7178E9C8C02D19A39012d25981056dedb54A257 (1000 ETH)
+# (9) 0x6fc08E29D39970890012b2acD42f91a31B915B2D (1000 ETH)
+
+# Private Keys
+# ==================
+# (0) 0x7952b7e736667b0b44397df0cc71f8690b47e7016dda9926461f55373197aaf3
+# (1) 0x57743fcc1114042955334448bdf3756d968076666a1a8e9cc1fe7cfb4d64e412
+# (2) 0x464dbcf059ca8d166a455224a10e6da9b54225a053c8e5989e4a1ce42f6be76d
+# (3) 0xf96a2c5f9b419d48418bee48cea3cb7c5f3bfa89406e9aacd3cd391daf5c2393
+# (4) 0xbfbc45ebd851a2d9a14a5357b0e20930a4b712b14f2795ad5feee3a6154fb90c
+# (5) 0x6c46d4ed5bb1667797867b00773e7cb52a048dccad5da7338c646c3d91d2b19d
+# (6) 0xcdcd4b6517bd0cb125b06ea93a5d072a88a849181913012b7db595485beec0d8
+# (7) 0x00fb26055b3da52b05775fc2e190a9c13f076b3ca33201feb8253eb00610fbe0
+# (8) 0xd42745e1b2d89163abecac703ea3226192904a14c0a27da976815c51f7933e2b
+# (9) 0xdf81689bcadabcf9ad18f3dd0c73f54ee503a3d217395121239ca204b42893d1
