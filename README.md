@@ -7,7 +7,7 @@ IPFS: `ipfs://bafybeihg3bie7qpposgs3vxbjup6warzzbpf2qivb3qjdcsumq4qay3q7m/#/`
 [Code on Etherscan](https://etherscan.io/address/0x5Dc58f812b2e244DABA2fabd33f399cD699D7Ddc#code)
 
 For a long time I was personally yield farming `LUSD` inside stability pool since I consider it the only reliable decentralised stable-coin which can't be easily corrupted by gorvernance. Though providing `LUSD` to stability pool also has 2 pit falls:
-1) You can [loose money](https://docs.liquity.org/faq/stability-pool-and-liquidations#can-i-lose-money-by-depositing-funds-to-the-stability-pool) if `LUSD` trades above 1.02$ during liquidations.
+1) You can [loose money](https://docs.liquity.org/faq/stability-pool-and-liquidations#can-i-lose-money-by-depositing-funds-to-the-stability-pool) if `LUSD` trades above 1.1$(or even slightly lower) during liquidations.
 2) You have to often rebase your position disposing of `ETH`(from liquidations) and `LQTY`(from yield farming).
 
 To address (1) there's a script [implemented](bots/gamma_farm_bot.py#L197) which pulls `LUSD` from stability pool if next oracle update can cause a loss of funds via liquidations.

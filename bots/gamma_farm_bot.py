@@ -44,7 +44,7 @@ START_NEW_EPOCH_GAS_LIMIT = 1200000
 EMERGENCY_WITHDRAW_GAS_LIMIT = 1200000
 EMERGENCY_RECOVER_GAS_LIMIT = 1200000
 
-LUSD_MIN_EMERGENCY_PRICE = 1.02
+LUSD_MIN_EMERGENCY_PRICE = 1.06
 
 def log(*args):
     log_message = time.strftime('[%Y-%m-%d %H:%M:%S] ') + ' '.join(str(arg) for arg in args)
