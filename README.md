@@ -2,7 +2,7 @@
 
 Deployment: [https://gammafarms.eth.limo](https://gammafarms.eth.limo)
 
-IPFS: `ipfs://bafybeihg3bie7qpposgs3vxbjup6warzzbpf2qivb3qjdcsumq4qay3q7m/#/`
+IPFS: `ipfs://bafybeiabzhnbuo4q2qynkyb2s2dxpfegezvvhewkwnfatib2gyfim5cfpa/#/`
 
 [Code on Etherscan](https://etherscan.io/address/0x5Dc58f812b2e244DABA2fabd33f399cD699D7Ddc#code)
 

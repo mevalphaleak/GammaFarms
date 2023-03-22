@@ -21,7 +21,7 @@ const signDataWithMetamask = async (provider, owner, typeData) => {
   const signature = await provider.send('eth_signTypedData_v4', [owner, typeData]);
   const r = signature.slice(0, 66);
   const s = '0x' + signature.slice(66, 130);
-  const v = Number('0x' + signature.slice(130, 132));
+  const v = 27 + Number('0x' + signature.slice(130, 132)) % 27;
   return {v, r, s}
 }
 
